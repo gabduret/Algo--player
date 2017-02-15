@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Player</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+
+
+    <section class="player playing">
+      <audio src="ressources/josephine(1930_version).mp3" title="0" autoplay></audio>
+
+      <section class="full-info">
+        <div class="current-illustration">
+          <div class="illustration">
+            <div class="full-controls">
+
+              <div class="controls-head">
+                <a href="#" class="replay"><img src="images/replay.png" alt="replay icon"></a>
+                <a href="#" class="repeat"><img src="images/repeat.png" alt="repeat icon"></a>
+              </div>
+
+              <div class="controls-center">
+                <a href="#" class="toggle-play">
+                  <span class="play">
+                    <img src="images/play.png" alt="play">
+                  </span>
+                  <span class="pause">
+                    <img src="images/pause.png" alt="pause">
+                  </span>
+                </a>
+              </div>
+
+              <div class="controls-footer">
+              </div>
+
+            </div>
+            <img class="current-illu" src="ressources/illustration/The_demon_diaries.jpg" alt="current illustration">
+          </div>
+        </div>
+
+        <div class="current-name">
+          <!--       
+<div class="template-name name-$">
+<div class="number">
+<p>1</p>
+</div>
+<div class="name">
+<p>Josephine 1930 version</p>
+</div>
+<div class="time">
+<p>4:24</p>
+</div>
+</div>
+--><!--template par défaut-->
+        </div>
+      </section>
+
+      <div class="controls">
+        <div class="level-bar">
+          <div class="progress"></div>
+        </div>
+        <div class="timer">00:00</div>
+        <!--<div class="full-timer">00:00</div>-->
+        <div class="seek-bar">
+          <div class="full"></div>
+        </div>
+      </div>
+
+
+
+    </section>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>

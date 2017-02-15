@@ -1,0 +1,327 @@
+body
+{
+  color: #191919;
+  background: #efefef;
+  font-family: 'Audiowide', cursive, Arial;
+  font-size: 16px;
+}
+a
+{
+  text-decoration: none;
+}
+
+.player
+{
+  width: 60vw;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+  background: #d4d4d4;
+  box-shadow: 0 0 35px 0px #b7b7b7;
+}
+
+
+/********************/
+
+/***** PLAYER ******/
+
+/******************/
+.player .full-info
+{
+  width: 100%;
+  height: 300px;
+  background: #d9d9d8;
+  display: flex;
+
+}
+
+.full-info .current-illustration
+{
+  width: 300px;
+  height: 100%;
+}
+.full-info .illustration
+{
+  width: 300px;
+  height: 100%;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.full-info .current-illustration img
+{
+  width: 100%;
+  transition: all ease 1s;
+}
+
+.full-info .current-name
+{
+  width: 100%;
+  /*  overflow-y: scroll;*/
+}
+/*********************
+
+------ CONTROLS ------
+
+*********************/
+.full-info .full-controls
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.full-info .illustration:hover .full-controls
+{
+  opacity: 1;
+}
+
+.full-info .controls-head
+{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.full-info .controls-center
+{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.full-info .controls-footer
+{
+  width: 100%;
+  height: 20%;
+}
+
+/* TOGGLE PLAY */
+.player .toggle-play
+{
+  width: 60px;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: transform 1s ease;
+  will-change: transform;
+}
+.player .pause
+{
+  display: none;
+  width: 60px;
+}
+.player.playing .play
+{
+  display: none;
+}
+.player.playing .pause
+{
+  display: block;
+}
+.player .toggle-play img
+{
+  width: 60px;
+}
+
+
+
+
+/*********************
+**** CURRENT NAME ***
+********************/
+.full-info .template-name
+{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: #e3e3e3;
+  justify-content: space-between;
+  will-change: opacity;
+}
+.full-info .template-name:nth-child(2n+2)
+{
+  background: #d9d9d9;  
+}
+.full-info .template-name:hover
+{
+  background: #ebcbcb;
+}
+.full-info .current-name #is-playing
+{
+  background: #e0b6b6;
+}
+
+
+
+.full-info .template-name .number
+{
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+.full-info .template-name .name
+{
+  width: 75%;
+}
+.full-info .template-name .time
+{
+  width: 12%;
+}
+
+
+
+
+
+/**** REPLAY REPEAT ***/
+.player .replay img
+{
+  width: 30px;
+  margin-left: 20px;
+}
+.player .repeat img
+{
+  width: 50px;
+  margin-right: 20px; 
+}
+.player .repeat
+{
+  opacity: 0.3;
+}
+
+
+/*************************/
+/* BARS DE PROGRESSIONS */
+/***********************/
+.controls
+{
+  padding-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*Timer*/
+.player .timer
+{
+  width: 70px;
+  font-size: 20px;
+  content: '0:00';
+  padding: 0 15px;
+}
+/*
+.player .full-timer
+{
+margin-top: 20px;
+font-size: 16px;
+content: '0:00';
+position: absolute;
+padding-left: 22px;
+}
+*/
+
+
+/*Seek-bar*/
+.player .seek-bar
+{
+  background: #e2e2e2;
+  width: 100%;
+  height: 8px;
+  padding: 2px 0;
+  transition: transform 0.5s ease;
+  will-change: tranform;
+}
+.player .seek-bar:hover
+{
+  cursor: pointer;
+}
+
+.player .seek-bar .full
+{
+  background: #3c3c3a;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  will-change: tranform;
+}
+
+/*Level-bar*/
+.player .level-bar
+{
+  background: #3c3c3a;
+  width: 10%;
+  height: 10px;
+  transition: transform 0.2s ease;
+  transform: scaleY(1) scaleX(1);
+  will-change: tranform;
+}
+
+.player .level-bar .progress
+{
+  background: #d99191;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  transform: scaleX(1);
+  will-change: tranform;
+}
+
+.player .level-bar:hover
+{
+  transform: scaleY(1) scaleX(1);
+}
+
+
+/*********************
+
+----- RESPONSIVE -----
+
+*********************/
+
+@media (max-width: 1050px)
+{
+  .player
+  {
+    width: 80vw;
+  }
+}
+@media (max-width: 850px)
+{
+  .player
+  {
+    width: 90vw;
+  }
+}
+@media (max-width: 750px)
+{
+  .player .full-info
+  {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .full-info .current-name
+  {
+    margin-top: 30px;
+  }
+  .player
+  {
+    margin-top: 30px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
